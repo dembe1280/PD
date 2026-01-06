@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PD | Web & App Development</title>
+
+<style>
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BASE ===== */
+html {
+  scroll-behavior: smooth; /* Automation 1 */
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #020b14;
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+/* ===== NAV ===== */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(2,11,20,0.95);
+  padding: 14px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+nav .logo {
+  color: #00c6ff;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+
+nav a {
+  color: #cbd5e1;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+nav a.active,
+nav a:hover {
+  color: #00c6ff;
+}
+
+/* ===== HERO ===== */
+header {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 140px 20px 80px;
+  background: radial-gradient(circle, #071826, #020b14);
+}
+
+header h1 {
+  font-size: 64px;
+  color: #00c6ff;
+  letter-spacing: 6px;
+}
+
+header p {
+  max-width: 600px;
+  margin: 20px auto;
+  color: #94a3b8;
+  font-size: 18px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 34px;
+  background: #00c6ff;
+  color: #000;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  animation: pulse 2s infinite;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  padding: 90px 20px;
+  max-width: 1100px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.8s ease;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+section h2 {
+  text-align: center;
+  font-size: 36px;
+  color: #00c6ff;
+  margin-bottom: 50px;
+}
+
+/* ===== GRID ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: #071826;
+  padding: 35px;
+  border-radius: 14px;
+  text-align: center;
+  border: 1px solid #0f3555;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #00c6ff;
+}
+
+.card p {
+  color: #94a3b8;
+  font-size: 15px;
+}
+
+/* ===== CONTACT ===== */
+.contact {
+  max-width: 500px;
+  margin: auto;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+}
+
+.contact button {
+  width: 100%;
+  padding: 14px;
+  background: #00c6ff;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.success {
+  text-align: center;
+  color: #00ff99;
+  margin-top: 15px;
+  display: none;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 rgba(0,198,255,0.6); }
+  70% { box-shadow: 0 0 20px rgba(0,198,255,0); }
+  100% { box-shadow: 0 0 0 rgba(0,198,255,0); }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+  header h1 { font-size: 48px; }
+  section { padding: 70px 15px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">PD</div>
+  <div>
+    <a href="#services">Services</a>
+    <a href="#packages">Packages</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header>
+  <div>
+    <h1>PD</h1>
+    <p>We design clean, professional websites and mobile applications that help businesses grow online.</p>
+    <a class="btn"
+       href="https://wa.me/27799109868?text=Hello%20PD,%20I%20need%20a%20website">
+       WhatsApp Us
+    </a>
+  </div>
+</header>
+
+<!-- SERVICES -->
+<section id="services">
+  <h2>Services</h2>
+  <div class="grid">
+    <div class="card"><h3>Web Development</h3><p>Modern responsive websites.</p></div>
+    <div class="card"><h3>Mobile Apps</h3><p>Android & iOS solutions.</p></div>
+    <div class="card"><h3>E-Commerce</h3><p>Online stores & payments.</p></div>
+    <div class="card"><h3>UI / UX</h3><p>Clean user-focused design.</p></div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section id="packages">
+  <h2>Packages</h2>
+  <div class="grid">
+    <div class="card"><h3>Starter</h3><p>From R2,500</p></div>
+    <div class="card"><h3>Business</h3><p>From R6,000</p></div>
+    <div class="card"><h3>E-Commerce</h3><p>From R15,000</p></div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <h2>Portfolio</h2>
+  <div class="grid">
+    <div class="card">Business Website</div>
+    <div class="card">Online Store</div>
+    <div class="card">Mobile App UI</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Us</h2>
+
+  <form class="contact"
+        action="https://formspree.io/f/YOUR_FORM_ID"
+        method="POST"
+        onsubmit="showSuccess()">
+
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+
+    <div class="success" id="successMsg">
+      ✅ Message sent successfully!
+    </div>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>WhatsApp: +27 79 910 9868</p>
+  <p>© 2026 PD • Dembe Phungo</p>
+</footer>
+
+<script>
+/* ===== SCROLL AUTOMATION ===== */
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", () => {
+  sections.forEach(section => {
+    const top = section.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      section.classList.add("show");
+    }
+  });
+
+  navLinks.forEach(link => {
+    const sec = document.querySelector(link.getAttribute("href"));
+    if (sec && window.scrollY >= sec.offsetTop - 120) {
+      navLinks.forEach(l => l.classList.remove("active"));
+      link.classList.add("active");
+    }
+  });
+});
+
+/* ===== FORM SUCCESS ===== */
+function showSuccess() {
+  setTimeout(() => {
+    document.getElementById("successMsg").style.display = "block";
+  }, 500);
+}
+</script>
+
+</body>
+</html>
