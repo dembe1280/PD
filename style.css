@@ -1,0 +1,239 @@
+/* =========================
+   PD – STYLE.CSS (POLISHED)
+   ========================= */
+
+/* ----- RESET ----- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ----- ROOT COLORS ----- */
+:root {
+  --bg-main: #020b14;
+  --bg-card: #071826;
+  --bg-nav: rgba(2, 11, 20, 0.95);
+
+  --primary: #00c6ff;
+  --primary-dark: #0099cc;
+
+  --text-main: #e5e7eb;
+  --text-muted: #94a3b8;
+
+  --border: #0f3555;
+}
+
+/* ----- BASE ----- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* ================= NAV ================= */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--bg-nav);
+  padding: 14px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+nav .logo {
+  color: var(--primary);
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+nav a {
+  color: var(--text-muted);
+  margin-left: 22px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--primary);
+}
+
+/* ================= HERO ================= */
+header {
+  min-height: 100vh;
+  padding: 140px 20px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: radial-gradient(circle, #071826, #020b14);
+}
+
+header h1 {
+  font-size: 64px;
+  letter-spacing: 6px;
+  color: var(--primary);
+}
+
+header p {
+  max-width: 600px;
+  margin: 20px auto;
+  color: var(--text-muted);
+  font-size: 18px;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 34px;
+  background: var(--primary);
+  color: #000;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 198, 255, 0.3);
+}
+
+/* ================= SECTIONS ================= */
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 90px 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+section h2 {
+  text-align: center;
+  font-size: 36px;
+  color: var(--primary);
+  margin-bottom: 50px;
+}
+
+/* ================= GRID ================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+/* CARD */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 35px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+.card h3 {
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+/* ================= CONTACT ================= */
+.contact {
+  max-width: 500px;
+  margin: auto;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+.contact button {
+  width: 100%;
+  padding: 14px;
+  background: var(--primary);
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact button:hover {
+  background: var(--primary-dark);
+}
+
+.success {
+  display: none;
+  margin-top: 15px;
+  text-align: center;
+  color: #00ff99;
+  font-weight: bold;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  padding: 40px 20px;
+  text-align: center;
+  color: #64748b;
+  font-size: 14px;
+  border-top: 1px solid var(--border);
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 rgba(0,198,255,0.5); }
+  70% { box-shadow: 0 0 20px rgba(0,198,255,0); }
+  100% { box-shadow: 0 0 0 rgba(0,198,255,0); }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 48px;
+  }
+
+  section {
+    padding: 70px 15px;
+  }
+
+  nav a {
+    margin-left: 14px;
+    font-size: 13px;
+  }
+}
