@@ -307,4 +307,6 @@ footer {
   .hamburger {
     display: block;
   }
+}.hamburger {
+  display: none;
 }
