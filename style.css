@@ -237,3 +237,57 @@ footer {
     font-size: 13px;
   }
 }
+/* NAVBAR */
+.navbar {
+  background: #0b0f1a;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  font-size: 22px;
+  color: #4da6ff;
+  font-weight: bold;
+}
+
+.hamburger {
+  width: 30px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: white;
+  margin: 6px 0;
+}
+
+/* MENU */
+#nav-menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background: #111827;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+#nav-menu a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+#nav-menu a:hover {
+  background: #1f2933;
+  border-radius: 5px;
+}
