@@ -291,3 +291,20 @@ footer {
   background: #1f2933;
   border-radius: 5px;
 }
+/* DESKTOP MENU */
+#nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  #nav-menu {
+    display: none;
+    flex-direction: column;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
