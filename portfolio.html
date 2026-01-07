@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | PD</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="top-bar">
+  <div class="logo">PD</div>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</header>
+
+<nav id="menu">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="packages.html">Packages</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section class="page">
+  <h2>Our Work</h2>
+
+  <div class="grid">
+    <div class="card">Business Website</div>
+    <div class="card">Online Store</div>
+    <div class="card">Mobile App UI</div>
+  </div>
+</section>
+
+<footer>
+  <p>More projects available on request</p>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
