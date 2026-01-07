@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | PD</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="top-bar">
+  <div class="logo">PD</div>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</header>
+
+<nav id="menu">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="packages.html">Packages</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section class="page">
+  <h2>Contact Us</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Email</h3>
+      <p>vusiphungo@gmail.com</p>
+    </div>
+
+    <div class="card">
+      <h3>WhatsApp</h3>
+      <a class="btn primary"
+         href="https://wa.me/27799109868?text=Hello%20PD,%20I%20would%20like%20to%20contact%20you">
+         Message on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 PD</p>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
