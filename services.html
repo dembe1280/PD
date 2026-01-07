@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | PD</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="top-bar">
+  <div class="logo">PD</div>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</header>
+
+<nav id="menu">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="packages.html">Packages</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section class="page">
+  <h2>Our Services</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Website Development</h3>
+      <p>Professional business websites built for speed and clarity.</p>
+    </div>
+
+    <div class="card">
+      <h3>Mobile Applications</h3>
+      <p>Android & iOS applications for modern businesses.</p>
+    </div>
+
+    <div class="card">
+      <h3>E-Commerce</h3>
+      <p>Online stores with ordering and payment features.</p>
+    </div>
+
+    <div class="card">
+      <h3>UI / UX Design</h3>
+      <p>Simple, clean, user-focused design.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 PD • Dembe Phungo</p>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
